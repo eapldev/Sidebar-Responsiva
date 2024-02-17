@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    min-width: 100vh;
+    background: #DCE4E3;
+    overflow: hidden;
+}
+
+main{
+    padding: 20px;
+    font-size: 10px;
+    color: #084236;
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #18C29C;
+    height: 100vh;
+    position: relative;
+    transition: all .3s;
+    min-width: 20px;
+}
+
+#sidebar_content{
+    position: relative;
+    padding: 12px;
+    top: 50px;
+}
+
+#logo{
+    position: absolute;
+    top: -29px;
+    left: 30px;
+}
+
+#logo_icon{
+    width: 5px;
+}
+
+#user{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    position: relative;
+    bottom: -805px;
+} 
+
+#user_avatar{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 12px;
+
+}
+
+#user_infos{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 400;
+    color: #084236;
+    position: relative;
+    left: -100px;
+
+    position: relative;
+    left: -55px;
+
+}
+
+#user_infos span:last-child{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+#side_items{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    list-style: none;
+}
+
+.side-item{
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+    position: relative;
+}
+
+.side-item.active{
+    background-color: #8ED7C6;
+}
+
+.side-item.out{
+    background-color: #DCE4E3;
+}
+
+.side-item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #084236;
+}
+
+.side-item a i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.side-item a img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+#logout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    background-color: #8ED7C6;
+}
+
+#logout_btn{
+    color: #084236;
+    background: none;
+    border: 0;
+
+    position: relative;
+    bottom: -3px;
+}
+
+#open_btn{
+    position: absolute;
+    top: -26px;
+    right: 28px;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.item-description{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .2s;
+    height: 0px;
+}
+
+#sidebar.open-sidebar{
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar #side_items{
+    position: relative;
+    top: -53px;
+}
+
+#sidebar.open-sidebar .item-description{
+    width: 100px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side-item a{
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+#sidebar.open-sidebar #logout_btn{
+    position: relative;
+    left: 95px;
+    bottom: -3px;
+}
+
+#sidebar.open-sidebar #logo_vet{
+    position: relative;
+    width: 65px;
+    left: 0px;
+    top: 0px;
+}
+
+#sidebar.open-sidebar .side-item.out{
+    background: #8ED7C6;
+}
